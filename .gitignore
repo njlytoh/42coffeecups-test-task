@@ -6,7 +6,7 @@
 42cc_test_task/downloads/
 42cc_test_task/eggs/
 42cc_test_task/parts/
-
+42cc_test_task/project.db
 #This is to skip python compiled
 *.py[co]
 *~
