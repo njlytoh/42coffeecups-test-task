@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: aboutme
+Version: 0.1dev
+Summary: About myself application.
+Home-page: UNKNOWN
+Author: Andriy Tomchuk
+Author-email: andrij.tomchuk@gmail.com
+License: UNKNOWN
+Description: Introduction
+        ============
+        
+        
+        
+        Changelog
+        =========
+        
+        0.1 - Unreleased
+        ----------------
+        
+        * Initial release
+        
+        
+Keywords: about
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
