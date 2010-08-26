@@ -33,7 +33,7 @@ MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
 # Don't share this with anybody.
-SECRET_KEY = '1xnferaa!el6-*qpr3=q^yi6@m5t!*)*ts1lxby$k4%#rt40=@'
+SECRET_KEY = 'a6u17u7)%j@ty+lw38(s(2y(%xpj30zvi*b+u3f22i(f3weae1'
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',

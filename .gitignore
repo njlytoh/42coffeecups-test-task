@@ -1,8 +1,14 @@
+
+#This dirs and files will be autocreated with buildout script
 42cc_test_task/.installed.cfg
-42cc_test_task/README.txt
 42cc_test_task/bin/
 42cc_test_task/develop-eggs/
 42cc_test_task/downloads/
 42cc_test_task/eggs/
 42cc_test_task/parts/
+
+#This is to skip python compiled
+*.py[co]
+*~
+
 
