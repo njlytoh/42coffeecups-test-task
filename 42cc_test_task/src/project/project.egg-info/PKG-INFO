@@ -1,0 +1,26 @@
+Metadata-Version: 1.0
+Name: project
+Version: 0.1dev
+Summary: 42CoffeeCups test project from njlytoh
+Home-page: http://atomchuk.user.eksi.net/
+Author: Andriy Tomchuk
+Author-email: andrij.tomchuk@gmail.com
+License: UNKNOWN
+Description: Introduction
+        ============
+        
+        42CoffeeCups test project from njlytoh.
+        
+        Changelog
+        =========
+        
+        0.1 - Unreleased
+        ----------------
+        
+        * Initial release
+        
+        
+Keywords: django project simple
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

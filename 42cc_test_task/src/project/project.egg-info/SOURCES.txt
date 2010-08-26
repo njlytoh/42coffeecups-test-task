@@ -1,0 +1,16 @@
+README.txt
+setup.cfg
+setup.py
+project/__init__.py
+project/manage.py
+project/models.py
+project/settings.py
+project/urls.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/namespace_packages.txt
+project.egg-info/not-zip-safe
+project.egg-info/requires.txt
+project.egg-info/top_level.txt
