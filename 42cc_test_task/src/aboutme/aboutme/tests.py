@@ -43,5 +43,8 @@ class AppTestCase(TestCase):
         response = self.client.get('/aboutme/')
 
 
+        # Check that the response is 200 OK.
+        self.failUnlessEqual(response.status_code, 200)
+
 
 
