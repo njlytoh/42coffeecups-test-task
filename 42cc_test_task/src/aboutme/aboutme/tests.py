@@ -35,3 +35,11 @@ class AppTestCase(TestCase):
                             bio=BIO)
 
         
+    def testIndexPage(self):
+        """
+        Testing index page
+        """
+        response = self.client.get('/aboutme/')
+
+
+
