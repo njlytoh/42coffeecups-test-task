@@ -2,8 +2,10 @@ README.txt
 setup.cfg
 setup.py
 project/__init__.py
+project/development.py
 project/manage.py
 project/models.py
+project/production.py
 project/settings.py
 project/urls.py
 project.egg-info/PKG-INFO
