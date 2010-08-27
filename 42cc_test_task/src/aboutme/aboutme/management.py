@@ -28,6 +28,7 @@ def create_default_aboutme_content(app, created_models, verbosity, db, **kwargs)
                            cell_phone='+380638671171',
                            home_phone='+380322706966',
                            bio=BIO)
+        aboutme.save()
 
 signals.post_syncdb.connect(create_default_aboutme_content, sender=models_app)
 
