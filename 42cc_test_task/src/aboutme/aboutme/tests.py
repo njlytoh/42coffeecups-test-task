@@ -18,7 +18,7 @@ class AppTestCase(TestCase):
     Populate this class with unit tests for your application
     """
     
-    urls = 'AboutMe.test_urls'
+    urls = 'aboutme.test_urls'
 
     
     @classmethod
