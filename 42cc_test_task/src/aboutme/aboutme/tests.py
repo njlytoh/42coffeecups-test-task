@@ -2,12 +2,24 @@ from django.test import TestCase
 
 from aboutme.models import AboutMe
 
+BIO = '''Sed velit ipsum, tempus id suscipit vel, eleifend vitae orci. 
+Fusce molestie consequat semper. Phasellus aliquet ultricies lacus nec congue.
+Proin est felis, sollicitudin eget euismod eget, tempor at neque. 
+In viverra sem vitae dui cursus a feugiat tortor fermentum. 
+Nunc pellentesque nisl non metus pretium sollicitudin. 
+Phasellus nunc lectus, molestie ullamcorper imperdiet nec, pulvinar vel nibh. 
+Sed eu nisi semper sapien aliquam interdum eget eget mauris.
+Nunc in felis metus. Cum sociis natoque penatibus et magnis dis 
+parturient montes, nascetur ridiculus mus. Ut mi ipsum, 
+tristique eget molestie luctus, dignissim sed augue.'''
+
 class AppTestCase(TestCase):
     """
     Populate this class with unit tests for your application
     """
     
     urls = 'AboutMe.test_urls'
+
     
     @classmethod
     def testCreateFixture(cls):
@@ -15,23 +27,11 @@ class AppTestCase(TestCase):
         This method is used as one to create fixture for initial data
         """
 
-        name = AboutMe(name='name', title='Given name', description='Andriy')
-        name.save()
-
-        family_name = AboutMe(name='family_name', 
-                         title='Family name', 
-                         description='Tomchuk')
-        family_name.save()
-
-        cell_phone = AboutMe(name="cell_phone",
-                        title="Cell phone",
-                        description="+380638671171")
-        cell_phone.save()
-
-        home_phone = AboutMe(name="home_phone",
-                                title="Home Phone",
-                                description="+380322706966")
-        home_phone.save()
-
+        aboutme = AboutMe(given_name='Andriy',
+                            family_name='Tomchuk',
+                            middle_name='Yuriyovich',
+                            cell_phone='+380638671171',
+                            home_phone='+380322706966',
+                            bio=BIO)
 
         

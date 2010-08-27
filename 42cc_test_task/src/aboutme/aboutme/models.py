@@ -3,6 +3,11 @@ from django.db import models
 # Create your models here.
 
 class AboutMe(models.Model):
-    name = models.CharField(max_length=30)
-    title = models.CharField(max_length=80)
-    description = models.CharField(max_length=200)
+    given_name = models.CharField(max_length=30, verbose_name="Given name")
+    middle_name = models.CharField(max_length=30, verbose_name="Middle name", blank=True)
+    family_name = models.CharField(max_length=30, verbose_name="Family name")
+    cell_phone = models.CharField(max_length=30, verbose_name="Cell phone")
+    home_phone = models.CharField(max_length=30, verbose_name="Home phone", blank=True)
+    bio = models.TextField(max_length=500, verbose_name="Biography")
+
+

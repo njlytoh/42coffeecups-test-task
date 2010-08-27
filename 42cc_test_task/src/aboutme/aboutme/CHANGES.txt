@@ -1,0 +1,2 @@
+
+Instead of using per_field records in aboutme database decided to use table with all data in record.

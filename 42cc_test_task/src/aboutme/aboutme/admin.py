@@ -5,8 +5,8 @@ from aboutme.models import AboutMe
 
 
 class AboutMeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'title', 'description')
-    search_fields = ('name', 'title', 'description')
+    list_display = ( 'given_name', 'family_name', 'cell_phone') 
+    search_fields = ('given_name', 'family_name', 'middle_name')
 
 admin.site.register(AboutMe, AboutMeAdmin)
 
