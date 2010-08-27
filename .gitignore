@@ -7,6 +7,7 @@
 42cc_test_task/eggs/
 42cc_test_task/parts/
 42cc_test_task/project.db
+42cc_test_task/omelette/
 #This is to skip python compiled
 *.py[co]
 *~
