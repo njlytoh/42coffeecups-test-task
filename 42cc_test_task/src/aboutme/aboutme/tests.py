@@ -39,7 +39,9 @@ class AppTestCase(TestCase):
         """
         Testing index page
         """
+
         response = self.client.get('/aboutme/')
+
 
 
 
