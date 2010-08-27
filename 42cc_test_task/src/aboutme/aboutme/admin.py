@@ -1,5 +1,12 @@
 from django.contrib import admin
 
-# Add your admin site registrations here, eg.
-# from aboutme.models import Author
-# admin.site.register(Author)
+from aboutme.models import AboutMe
+
+
+
+class AboutMeAdmin(admin.ModelAdmin):
+    list_display = ('name', 'title', 'description')
+    search_fields = ('name', 'title', 'description')
+
+admin.site.register(AboutMe, AboutMeAdmin)
+
