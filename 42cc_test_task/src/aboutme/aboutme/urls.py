@@ -4,4 +4,5 @@ from django.conf.urls.defaults import *
 
 urlpatterns = patterns('aboutme.views',
   # Add url patterns here
+  (r'^$', 'index')
 )
