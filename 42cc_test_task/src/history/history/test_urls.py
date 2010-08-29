@@ -6,4 +6,5 @@ from django.conf.urls.defaults import *
 
 urlpatterns = patterns('history.views',
   # Add url patterns here
+  (r'^history/test_middleware', 'test_middleware'),
 )

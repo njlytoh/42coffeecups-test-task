@@ -4,6 +4,8 @@ from django.test import TestCase
 from django.contrib.auth.models import AnonymousUser
 from django.test import Client
 from django.core.handlers.wsgi import WSGIRequest
+from django.http import Http404
+from django.core.exceptions import ObjectDoesNotExist
 
 from history.models import HTTPRequestHistory
 
@@ -63,3 +65,14 @@ class AppTestCase(TestCase):
         request.save_request(get_request)
         self.assertEquals('/history/test/', request.path)
         self.assertEquals( '{"query": "test"}' , request.get)
+
+    def testRequestHistory(self):
+        client = Client()
+        response = client.get('/history/test_middleware', {'middleware': 'test'}), 
+        try:
+            history_object = HTTPRequestHistory.objects.get(path='/hostory/test_middleware')
+        except ObjectDoesNotExist:
+            self.fail('Request not save in the database. Object does not exists.')
+        
+        self.assertEquals(history_object.get, '{"query": "test"}')
+
