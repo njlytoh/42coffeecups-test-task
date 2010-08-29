@@ -68,9 +68,9 @@ class AppTestCase(TestCase):
 
     def testRequestHistory(self):
         client = Client()
-        response = client.get('/history/test_middleware', {'middleware': 'test'}), 
+        response = client.get('/history/test_middleware', {'query': 'test'}), 
         try:
-            history_object = HTTPRequestHistory.objects.get(path='/hostory/test_middleware')
+            history_object = HTTPRequestHistory.objects.get(path='/history/test_middleware')
         except ObjectDoesNotExist:
             self.fail('Request not save in the database. Object does not exists.')
         

@@ -8,7 +8,7 @@ DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
-MIDDLEWARE_CLASSES = 
+MIDDLEWARE_CLASSES = (
     'history.middleware.RequestHistory',
 )
 INSTALLED_APPS = (
