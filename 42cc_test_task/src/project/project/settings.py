@@ -79,7 +79,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'aboutme'
+    'aboutme',
+    'history'
 )
 
 FIXTURE_DIRS = (
