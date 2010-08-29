@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: history
+Version: 0.1dev
+Summary: HTTP history middleware.
+Home-page: UNKNOWN
+Author: Andriy Tomchuk
+Author-email: njlytoh@gmail.com
+License: UNKNOWN
+Description: Introduction
+        ============
+        
+        
+        
+        Changelog
+        =========
+        
+        0.1 - Unreleased
+        ----------------
+        
+        * Initial release
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
