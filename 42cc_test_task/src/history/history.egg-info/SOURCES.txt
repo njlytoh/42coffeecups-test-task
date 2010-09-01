@@ -3,6 +3,7 @@ setup.cfg
 setup.py
 history/__init__.py
 history/admin.py
+history/middleware.py
 history/models.py
 history/test_settings.py
 history/test_urls.py
