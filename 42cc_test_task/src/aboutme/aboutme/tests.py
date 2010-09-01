@@ -44,7 +44,19 @@ class AppTestCase(TestCase):
         
         # Check that the response is 200 OK.
         self.failUnlessEqual(response.status_code, 200)
-        
-        
+
+    def testEditPage(self):
+        """
+        Testing edit page
+        """
+
+        response = self.client.post('/aboutme/edit',{'given_name': 'First', 'family_name': 'Tomchuk', 'middle_name': 'Some Name', 'cell_phone':'+38887777778'})
+        aboutme = AboutMe.objects.all()[0]
+        self.assertEqual(response.status_code, 200)
+        print response.content
+        self.failUnless('About me save.' in response.content)
+
+        self.assertEquals(aboutme.given_name, 'First')
+
 
 
