@@ -1,24 +1,35 @@
-# Create your views here.
+import re
+
 from django.shortcuts import render_to_response
+from django import forms
+from django.forms import ModelForm
 
 from aboutme.models import AboutMe
 
+class AboutMeForm(forms.ModelForm):
+    class Meta:
+        model = AboutMe
+        widgets = {
+           'bio': forms.Textarea(attrs={'cols': 80, 'rows': 20}),
+        }
 
 def index(request):
-    aboutmes = AboutMe.objects.all()
-    if aboutmes:
-        aboutme = aboutmes[0]
-    else:
-        raise Http404("Database not initialized. run \"bin/django syncdb\"")
-
+    aboutme = AboutMe.get_aboutme()
     return render_to_response('aboutme/index.html', {'aboutme': aboutme})
 
 def edit(request):
-    aboutmes = AboutMe.objects.all()
-    
-    if aboutmes:
-        aboutme = aboutmes[0]
+    aboutme = AboutMe.get_aboutme()
+    if request.method=="POST":
+        form = AboutMeForm(request.POST, instance=aboutme)
+        if not form.errors:
+            form.save()
     else:
-        raise Http404("Database not initialized. run \"bin/django syncdb\"")
-    return render_to_response("aboutme/edit.html", {'aboutme': aboutme})
+        form = AboutMeForm(instance=aboutme)
+    return render_to_response("aboutme/edit.html", {'form': form})
+
+def save_data(data):
+    aboutme = AboutMe.get_aboutme()
+    for attr in attrs:
+        if data.has_key(attr):
+            aboutme [attr] = data.get(attr)
 
