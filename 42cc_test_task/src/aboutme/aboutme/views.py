@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from aboutme.models import AboutMe
 
 
+
 def index(request):
     aboutmes = AboutMe.objects.all()
     if aboutmes:
