@@ -54,8 +54,7 @@ class AppTestCase(TestCase):
         aboutme = AboutMe.objects.all()[0]
         self.assertEqual(response.status_code, 200)
         print response.content
-        self.failUnless('About me save.' in response.content)
-
+        self.failUnless('Edit aboutme data.' in response.content)
         self.assertEquals(aboutme.given_name, 'First')
 
 
