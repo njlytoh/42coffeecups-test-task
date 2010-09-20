@@ -4,12 +4,15 @@
 {% block title %}{% trans "About myself" %}{% endblock %}
 
 {% block content %}
-  <h1>{% trans "Here is short info about myself" %}</h1>
-  <ul>
-    <li><strong> Full name: </strong> {{ aboutme.full_name }} </li>
-    <li><strong> Cell phone: </strong> {{ aboutme.cell_phone }} </li>
-    <li><strong> Home phone: </strong> {{ aboutme.home_phone }} </li>
-    <li><strong> Biography: </strong> {{aboutme.bio }} </li>
-  </ul>
+    <h1>{% trans "Edit aboutme data." %}</h1>
+    <form method="POST">
+        <ul>     
+            <li><label for="full_name"><strong> Full name: </strong></label><input type="TEXT" name="full_name" value="{{ aboutme.full_name }}"/> </li>
+            <li><label for="cell_phone"><strong> Cell phone: </strong></label><input type="TEXT" name="full_name" value="{{ aboutme.cell_phone }}"/> </li>
+            <li><label for="home_phone"><strong> Home phone: </strong></label><input type="TEXT" name="full_name" value="{{ aboutme.home_phone }}"/> </li>
+            <li><label for="bio"><strong> Biography: </strong></label><textarea rows="20" cols="40">{{aboutme.bio }}</textarea> </li>
+            <li><input type="submit" value="Save"/></li>
+        </ul>
+    </form>
 {% endblock %}
 

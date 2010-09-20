@@ -15,6 +15,7 @@ def index(request):
 
 def edit(request):
     aboutmes = AboutMe.objects.all()
+    
     if aboutmes:
         aboutme = aboutmes[0]
     else:

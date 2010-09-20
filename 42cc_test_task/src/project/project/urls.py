@@ -12,7 +12,7 @@ urlpatterns = patterns(
     (r'^admin/(.*)', admin.site.root),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
     (r'^$', 'aboutme.views.index'),
-    (r'^aboutme/(.*)', include('aboutme.urls')),
+    (r'^aboutme/', include('aboutme.urls')),
 )
 
 if settings.DEBUG:
