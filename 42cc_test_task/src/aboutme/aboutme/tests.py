@@ -50,10 +50,13 @@ class AppTestCase(TestCase):
         Testing edit page
         """
 
-        response = self.client.post('/aboutme/edit',{'given_name': 'First', 'family_name': 'Tomchuk', 'middle_name': 'Some Name', 'cell_phone':'+38887777778'})
+        response = self.client.post('/aboutme/edit',{'given_name': 'First', 
+                                                     'family_name': 'Tomchuk', 
+                                                     'middle_name': 'Some Name', 
+                                                     'cell_phone': '+38887777778', 
+                                                     'bio': 'test'})
         aboutme = AboutMe.objects.all()[0]
         self.assertEqual(response.status_code, 200)
-        print response.content
         self.failUnless('Edit aboutme data.' in response.content)
         self.assertEquals(aboutme.given_name, 'First')
 
