@@ -3,6 +3,7 @@ setup.cfg
 setup.py
 processor/__init__.py
 processor/admin.py
+processor/context_processors.py
 processor/models.py
 processor/test_settings.py
 processor/test_urls.py

@@ -3,6 +3,8 @@ setup.cfg
 setup.py
 aboutme/__init__.py
 aboutme/admin.py
+aboutme/fields.py
+aboutme/forms.py
 aboutme/management.py
 aboutme/models.py
 aboutme/test_settings.py
