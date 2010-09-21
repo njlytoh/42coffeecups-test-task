@@ -64,7 +64,7 @@ class AppTestCase(TestCase):
 
         request.save_request(get_request)
         self.assertEquals('/history/test/', request.path)
-        self.assertEquals( '{"query": "test"}' , request.get)
+        self.assertEquals( '{"query": ["test"]}' , request.get)
 
     def testRequestHistory(self):
         client = Client()
@@ -74,5 +74,5 @@ class AppTestCase(TestCase):
         except ObjectDoesNotExist:
             self.fail('Request not save in the database. Object does not exists.')
         
-        self.assertEquals(history_object.get, '{"query": "test"}')
+        self.assertEquals(history_object.get, '{"query": ["test"]}')
 
