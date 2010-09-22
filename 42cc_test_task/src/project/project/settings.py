@@ -55,10 +55,15 @@ SECRET_KEY = 'wanzb#*&py^2%iz02-_x_i+3@+l&*)d6d)sij@502j4*d2r1hz'
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
+    'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.eggs.Loader',
+)
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(__file__), "templates"),
 )
 
+STATIC_FILES = os.path.join(os.path.dirname(__file__), "static/"
+)
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
@@ -86,6 +91,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
+    'project',
     'aboutme',
     'history',
     'processor',
