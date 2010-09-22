@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "About myself" %}{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Edit aboutme data." %}</h1>
+    <div class="aboutme-edit">
+        <form method="POST">
+            {% for field in form %}
+                <div class="fieldWrapper {{ field.html_name }}">
+                    {{ field.errors }}
+                    {{ field.label_tag }} {{ field }}
+                </div>
+            {% endfor %}
+            <div class="cleaner"> <!-- --></div>
+            <p><input type="submit" value="Save Aboutme" /></p>
+        </form>
+    </div>
+{% endblock %}
+

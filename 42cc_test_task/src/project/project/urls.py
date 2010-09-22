@@ -8,7 +8,6 @@ handler500 # Pyflakes
 
 urlpatterns = patterns(
     '',
-    (r'^test', 'project.views.index'),
     (r'^admin/(.*)', admin.site.root),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
     (r'^$', 'aboutme.views.index'),
