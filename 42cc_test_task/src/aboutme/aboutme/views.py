@@ -10,7 +10,7 @@ class AboutMeForm(forms.ModelForm):
     class Meta:
         model = AboutMe
         widgets = {
-           'bio': forms.Textarea(attrs={'cols': 80, 'rows': 20}),
+           'bio': forms.Textarea(attrs={'cols': 50, 'rows': 20}),
         }
 
 def index(request):
@@ -26,10 +26,4 @@ def edit(request):
     else:
         form = AboutMeForm(instance=aboutme)
     return render_to_response("aboutme/edit.html", {'form': form})
-
-def save_data(data):
-    aboutme = AboutMe.get_aboutme()
-    for attr in attrs:
-        if data.has_key(attr):
-            aboutme [attr] = data.get(attr)
 
