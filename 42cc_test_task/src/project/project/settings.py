@@ -68,6 +68,7 @@ from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'processor.context_processors.django_settings',
+    'django.core.context_processors.request',
 )
 
 MIDDLEWARE_CLASSES = (
