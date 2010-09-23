@@ -3,6 +3,8 @@ import re
 from django.shortcuts import render_to_response
 from django import forms
 from django.forms import ModelForm
+from django.contrib.auth.decorators import login_required
+from django.template import RequestContext
 
 from aboutme.models import AboutMe
 
@@ -15,8 +17,10 @@ class AboutMeForm(forms.ModelForm):
 
 def index(request):
     aboutme = AboutMe.get_aboutme()
-    return render_to_response('aboutme/index.html', {'aboutme': aboutme})
+    return render_to_response('aboutme/index.html', {'aboutme': aboutme}, context_instance=RequestContext(request))
+    
 
+@login_required
 def edit(request):
     aboutme = AboutMe.get_aboutme()
     if request.method=="POST":
@@ -25,5 +29,5 @@ def edit(request):
             form.save()
     else:
         form = AboutMeForm(instance=aboutme)
-    return render_to_response("aboutme/edit.html", {'form': form})
+    return render_to_response("aboutme/edit.html", {'form': form}, context_instance=RequestContext(request))
 
