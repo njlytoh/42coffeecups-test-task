@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.contrib.auth.models import User
 
 from aboutme.models import AboutMe
 
@@ -50,12 +51,17 @@ class AppTestCase(TestCase):
         Testing edit page
         """
 
+        user = User.objects.create_user('bob', 'marley@thewailers.com', 'jah')
+        user.is_superuser = True
+        user.save()
+        self.client.login(username='bob', password='jah')
         response = self.client.post('/aboutme/edit',{'given_name': 'First', 
                                                      'family_name': 'Tomchuk', 
                                                      'middle_name': 'Some Name', 
                                                      'cell_phone': '+38887777778', 
                                                      'bio': 'test'})
-        aboutme = AboutMe.objects.all()[0]
+        aboutme = AboutMe.get_aboutme()
+       
         self.assertEqual(response.status_code, 200)
         self.failUnless('Edit aboutme data.' in response.content)
         self.assertEquals(aboutme.given_name, 'First')
