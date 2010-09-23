@@ -8,6 +8,7 @@ project/models.py
 project/production.py
 project/settings.py
 project/urls.py
+project/x42cctags.py
 project.egg-info/PKG-INFO
 project.egg-info/SOURCES.txt
 project.egg-info/dependency_links.txt
@@ -16,3 +17,6 @@ project.egg-info/namespace_packages.txt
 project.egg-info/not-zip-safe
 project.egg-info/requires.txt
 project.egg-info/top_level.txt
+project/templatetags/__init__.py
+project/templatetags/coffeetags.py
+project/templatetags/tags.py
