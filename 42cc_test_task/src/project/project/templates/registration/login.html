@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "AboutMe login" %}{% endblock %}
+
+{% block content %}
+  <h1>Login for private area.</h1>
+  <form method="post" action="{% url django.contrib.auth.views.login %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p> 
+      <input type="submit" value="Login" />
+      {% if next %}
+        <input type="hidden" name="next" value="{{ next }}" />
+      {% else %}
+        <input type="hidden" name="next" value="/" />
+      {% endif %}
+    </p>
+  </form>
+{% endblock %}

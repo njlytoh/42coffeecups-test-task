@@ -9,7 +9,9 @@ handler500 # Pyflakes
 urlpatterns = patterns(
     '',
     (r'^admin/(.*)', admin.site.root),
+    (r'^accounts/$', 'django.contrib.auth.views.login'),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    (r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
     (r'^$', 'aboutme.views.index'),
     (r'^aboutme/', include('aboutme.urls')),
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',

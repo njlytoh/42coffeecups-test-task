@@ -10,31 +10,46 @@ body {
     width: 600px;
     margin: 50px auto;
     background: #fff;
-
+    border: 1px solid #888;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
 }
+
 .aboutme-edit {
     text-align: center;
-    padding: 20px;
 }
 
 .cleaner {
     clear: both;
+}
+.content {
+    padding: 10px;
+    color: #555;
+    padding-top: 20px;
+}
+
+.content ul li{
+    list-style-type: none;
 }
 .fieldWrapper {
     width: 400px;
     display: block;
     margin: 0 auto;
 }
+
 .fieldWrapper label{
     width: 150px;
     display: inline-block;
-    font-style: bolder;
+    font-weight: bolder;
+    color: #555;
 }
 .navigation
 {
     float: left;
     width: 100%;
     background: #333;
+    border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
 }
 
 .navigation ul
@@ -59,5 +74,16 @@ body {
     border-right: 1px solid #fff;
 }
 
+.navigation li a.active { background: #151; }
 .navigation li a:hover { background: #383; }
 
+
+.navigation .right {
+    float: right;
+    border-right: none;
+    border-radius: 0 8px 0 0;
+    -moz-border-radius: 0 8px 0 0;
+}
+.navigation .left {
+    border-radius: 8px 0 0 0;
+    -moz-border-radius: 8px 0 0 0;

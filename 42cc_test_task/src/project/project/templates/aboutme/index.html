@@ -4,12 +4,12 @@
 {% block title %}{% trans "About myself" %}{% endblock %}
 
 {% block content %}
-  <h1>{% trans "Here is short info about myself modified in project" %}</h1>
+  <h1>{% trans "Here is short info about myself" %}</h1>
   <ul>
-    <li><strong> Full name: </strong> {{ aboutme.full_name }} </li>
-    <li><strong> Cell phone: </strong> {{ aboutme.cell_phone }} </li>
-    <li><strong> Home phone: </strong> {{ aboutme.home_phone }} </li>
-    <li><strong> Biography: </strong> {{aboutme.bio }} </li>
+    <li><strong>{% trans "Full name:" %}</strong> {{ aboutme.full_name }} </li>
+    <li><strong>{% trans "Cell phone:" %} </strong> {{ aboutme.cell_phone }} </li>
+    <li><strong>{% trans "Home phone:" %}</strong> {{ aboutme.home_phone }} </li>
+    <li><strong>{% trans "Biography:" %}</strong> {{aboutme.bio }} </li>
   </ul>
 {% endblock %}
 

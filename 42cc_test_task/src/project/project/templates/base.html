@@ -1,3 +1,4 @@
+{% load coffeetags %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>
@@ -10,13 +11,19 @@
       {% block navigation %} 
       <div class="navigation">
         <ul>
-            <li><a href="/aboutme">About me</a></li>
-            <li><a href="/aboutme/edit">Edit about me</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="/aboutme/" class="left {% isactive request 'aboutme/' %}">About me</a></li>
+            <li><a href="/aboutme/edit" class="{% isactive request 'aboutme/edit' %}" >Edit about me</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url django.contrib.auth.views.logout %}" class="right">Logout</a></li>
+            {% else %}
+                <li><a href="{% url django.contrib.auth.views.login %}" class="{% isactive request 'accounts/login/' %} right">Login</a></li>
+            {% endif %}
         </ul>
       </div>
       {% endblock %}
+      <div class="content">
       {% block content %}{% endblock %}
+      </div>
   </div>
 </body>
 </html>
