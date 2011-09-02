@@ -8,6 +8,7 @@
 42cc_test_task/parts/
 42cc_test_task/project_database.db
 42cc_test_task/omelette/
+42cc_test_task/.env
 #This is to skip python compiled
 *.py[co]
 *~
