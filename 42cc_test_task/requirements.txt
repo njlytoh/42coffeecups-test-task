@@ -2,3 +2,5 @@ Django==1.3
 djangorecipe
 zc.buildout
 json
+simplejson
+
